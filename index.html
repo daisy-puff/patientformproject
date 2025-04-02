@@ -555,9 +555,10 @@
                     <tr>
                         <td colspan = "3">
                             <center>
-                            <input type="submit" value="Submit">
-                            <input type = "reset">
-                            <input type = "button" name = "review" id = "review" value = "Review" onclick = "reviewInput()">
+                            	<input type ="submit" name = "submit" id = "submit">
+                            	<input type = "reset" name = "reset" id = "reset">
+                            	<input type = "button" name = "review" id = "review" value = "Review" onclick = "reviewInput()">
+			    	<input type = "button" name = "validate" id = "validate" value = "Validate" onclick = "validateEverything()">
                             </center>
                         </td>
                     </tr>
@@ -578,6 +579,13 @@
             </tr>
         </table>
     </footer>
+
+    <div id = "alert-box">
+	<div id = "alert-content">
+	    <h4> Please fill out all required fields or any other message you want </h4>
+	    <button id = "close-alert">OK</button>
+	</div>
+    </div>
 
     </body>
 </html>
