@@ -446,7 +446,7 @@ function validateEverything()
            valid = false;
      }
 
-     if (valid)
+     if (valid = true)
      {
             document.getElementById("submit").disabled = false;
      }
