@@ -38,17 +38,15 @@ function validateFname()
 /* middle int validation below */
 function validateMidint()
 {
-    middleint = document.getElementById("midint").value;
+    let mini = document.getElementById("midint").value;
+    const namePattern = /^[A-Z]+$/;
 
-    let regex = /[a-zA-Z ]/;
-    if (!regex.test(middleint))
+    mini = mini.toUpperCase();
+    document.getElementById("mini").value = mini;
+
+    if (!mini.match(namePattern))
     {
-        document.getElementById("midint-error").innerHTML = "Middle initial can only have letters";
-        return false;
-    }
-    else if (middleint.length > 1)
-    {
-        document.getElementById("midint-error").innerHTML = "Middle initial can only be one character long";
+        document.getElementById("midint-error").innerHTML = "Middle initial must be a single uppercase letter";
         return false;
     }
     else
@@ -142,6 +140,23 @@ function validateAddress1()
         document.getElementById("address1-error").innerHTML = "";
         return true;
     }
+}
+
+/* city validation */
+function validateCity()
+{
+     city = document.getElementById("city").value.trim();
+
+     if (!city)
+     {
+         document.getElementById("city-error").innerHTML = "City can't be blank";
+         return false;
+     }
+     else
+     {
+         document.getElementById("city-error").innerHTML = "";
+         return true;
+     }
 }
 
 /* zipcode validation below */
