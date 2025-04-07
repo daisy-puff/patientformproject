@@ -452,6 +452,6 @@ function validateEverything()
      }
      else
      {
-            showAlert();
+            alert("Please fix the indicated errors!");
      }
 }
